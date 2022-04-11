@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/basic.css" />
+
+    <title>MyFeed</title>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <h1>My Feed</h1>
+        </a>
+
+        <nav>
+            <div class="dropdown">
+                <button id="dropbtn" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+                    </svg></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="./index.html">Home</a>
+                    <a href="./index.html">Gallery</a>
+                    <a href="./index.html">Games</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div id="content_head">
+                <h3>Here's my blog's content:</h3>
+                <input id="refresh_button" type="button" value="Refresh feed" />
+            </div>
+
+            <div id="feed">
+                <div class="post_container">
+                    <img src="" alt="image description">
+                    <article class="post">
+                        <h3 class="post_title">My article</h3>
+                        <h4 class="post_author_date">By Diane, on 04/11/2022</h4>
+                        <p class="post_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div id="new_article">
+                <div id="new_article_title_container">
+                    <h4 id="new_article_title">Add an article:</h4>
+                </div>
+
+                <input type="hidden" name="date" value="date">
+
+                <div class="input_container">
+                    <label for="author_name">Your name or alias:</label>
+                    <input type="text" id="new_author" name="author_name" required minlength="1" maxlength="50"
+                        size="10">
+                </div>
+
+                <div class="input_container">
+                    <label for="title">Your article's title:</label>
+                    <input type="text" id="new_title" name="title" required minlength="1" maxlength="50" size="10">
+                </div>
+                <div class="input_container">
+                    <label for="image">Your image's url:</label>
+                    <input type="text" id="new_image" name="image" required minlength="1" maxlength="50" size="10">
+                </div>
+                <div id="textarea_container" class="input_container">
+                    <label for="article">Your content:</label>
+                    <textarea id="new_content" name="content" rows="5" cols="33"></textarea>
+                </div>
+                <input id="publish_btn" type="submit" value="publish">
+            </div>
+        </div>
+        <script src="./scripts/dropDownBtn.js"></script>
+    </main>
+
+    <footer>
+        <p>Diane Binsztok 2022</p>
+    </footer>
+
+
+</body>
+
+</html>
